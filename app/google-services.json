@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "661575820537",
+    "project_id": "ekart-cf358",
+    "storage_bucket": "ekart-cf358.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661575820537:android:9f12b041a9aa3feec4ee28",
+        "android_client_info": {
+          "package_name": "com.dhruva.shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661575820537-i6u4r9khs0rk88c78t2699l50vc47ass.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dhruva.shopping",
+            "certificate_hash": "54cda9de2a9a3067f4463ed898f9d5455a0dc477"
+          }
+        },
+        {
+          "client_id": "661575820537-cmm3qu46q2dkmdhu56j79guru030dlg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoL3KwbRDnPrvwr9Dx5i3Vb0zB-tr7cFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661575820537-cmm3qu46q2dkmdhu56j79guru030dlg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
