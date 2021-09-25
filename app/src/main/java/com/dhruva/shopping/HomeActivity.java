@@ -162,7 +162,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_cart) {
+        if (id == R.id.nav_store) {
             Intent intent = new Intent(HomeActivity.this,CartActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_search) {
@@ -171,7 +171,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_categories) {
 
-        } else if (id == R.id.nav_settings) {
+        } else if (id == R.id.nav_profile) {
             Intent intent=new Intent(HomeActivity.this,SettinsActivity.class);
             startActivity(intent);
 
