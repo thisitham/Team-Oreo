@@ -9,11 +9,12 @@
 
     <ImageView
         android:id="@+id/login_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:src="@drawable/applogo" />
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/foodie" />
 
     <EditText
         android:id="@+id/login_phone_number_input"
@@ -22,6 +23,7 @@
         android:layout_below="@+id/login_applogo"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/input_border"
         android:hint="Phone Number"
         android:inputType="number"
@@ -38,6 +40,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/input_border"
         android:hint="Password"
         android:inputType="textPassword"
@@ -87,11 +90,12 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
-        android:background="@color/white"
-        android:padding="15dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/aladin"
+        android:padding="10dp"
         android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="@color/colorOnSecondary"
+        android:textAllCaps="true"
+        android:textColor="#272727"
         android:textSize="18sp" />
 
 
@@ -102,6 +106,7 @@
         android:layout_below="@+id/login_btn"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="23dp"
         android:text="I'm an Admin?"
         android:textColor="@color/colorOnSecondary"
@@ -117,6 +122,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
         android:text="I'm not an Admin?"
         android:textColor="@color/colorOnSecondary"
         android:textSize="20sp"

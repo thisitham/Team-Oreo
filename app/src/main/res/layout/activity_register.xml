@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register"
+    android:background="@drawable/yellowback"
     tools:context=".RegisterActivity">
+
     <ImageView
         android:id="@+id/register_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/applogo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        />
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/foodie" />
 
     <EditText
         android:id="@+id/register_username_input"
@@ -22,7 +23,8 @@
         android:layout_below="@+id/register_applogo"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/input_design"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/input_border"
         android:hint="Name"
         android:inputType="text"
         android:padding="20dp"
@@ -38,7 +40,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/input_design"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/input_border"
         android:hint="Phone Number"
         android:inputType="number"
         android:padding="20dp"
@@ -55,7 +58,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/input_design"
+        android:background="@drawable/input_border"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="20dp"
@@ -70,13 +73,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_password_input"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="12dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/buttons"
-        android:padding="17dp"
+        android:fontFamily="@font/aladin"
+        android:padding="10dp"
         android:text="Create Account"
-        android:textAllCaps="false"
-        android:textColor="@color/colorOnSecondary"
+        android:textAllCaps="true"
+        android:textColor="#272727"
         android:textSize="18sp" />
 
 </RelativeLayout>
