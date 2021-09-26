@@ -33,6 +33,7 @@ import java.util.HashMap;
 public class AdminAddNewProductActivity extends AppCompatActivity {
     private String CategoryName, Description, Price, Pname, saveCurrentDate, saveCurrentTime;
     private Button AddNewProductButton;
+    private Button Back_btn;
     private ImageView InputProductImage;
     private EditText InputProductName, InputProductDescription, InputProductPrice;
     private static final int GalleryPick = 1;
@@ -56,6 +57,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);
+        Back_btn = (Button) findViewById(R.id.admin_new_itempage_back);
         InputProductImage = (ImageView) findViewById(R.id.select_product_image);
         InputProductName = (EditText) findViewById(R.id.product_name);
         InputProductDescription = (EditText) findViewById(R.id.product_description);
@@ -77,6 +79,14 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 ValidateProductData();
+            }
+        });
+
+        Back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btnIntent = new Intent(AdminAddNewProductActivity.this,AdminCategoryActivity.class);
+                startActivity(btnIntent);
             }
         });
     }

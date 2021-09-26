@@ -12,7 +12,7 @@
         android:layout_width="320dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
         android:src="@drawable/upload" />
@@ -73,6 +73,23 @@
         android:fontFamily="@font/aladin"
         android:padding="17dp"
         android:text="Add Product"
+        android:textAllCaps="false"
+        android:textColor="@color/colorOnSecondary"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/admin_new_itempage_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_new_product"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/aladin"
+        android:padding="17dp"
+        android:text="Back"
         android:textAllCaps="false"
         android:textColor="@color/colorOnSecondary"
         android:textSize="18sp" />
