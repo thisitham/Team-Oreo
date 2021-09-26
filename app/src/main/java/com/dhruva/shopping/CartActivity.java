@@ -65,7 +65,7 @@ public class CartActivity extends AppCompatActivity{
     protected void onStart() {
         super.onStart();
         CheckOrderState();
-        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference().child("Cart List");
         FirebaseRecyclerOptions<Cart> options =
                 new FirebaseRecyclerOptions.Builder<Cart>()
                         .setQuery(cartListRef.child("User view")
@@ -75,8 +75,9 @@ public class CartActivity extends AppCompatActivity{
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
                 holder.txtProductQuantity.setText("Quantity = "+model.getQuantity());
-                holder.txtProductPrice.setText("Price = "+model.getPrice()+" Rs.");
+                holder.txtProductPrice.setText("Per Item Price = Rs. "+model.getPrice());
                 holder.txtProductName.setText(model.getPname());
+                holder.txtProdctPerPrice.setText("Total Price = Rs." + ((Integer.valueOf(model.getPrice())))* Integer.valueOf(model.getQuantity()) );
                 int oneTyprProductTPrice = ((Integer.valueOf(model.getPrice())))* Integer.valueOf(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTyprProductTPrice;
 
@@ -136,7 +137,7 @@ public class CartActivity extends AppCompatActivity{
     private void CheckOrderState()
     {
         DatabaseReference ordersRef;
-        ordersRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.currentOnlineUser.getPhone());
+        ordersRef = FirebaseDatabase.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference().child("Orders").child(Prevalent.currentOnlineUser.getPhone());
         ordersRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

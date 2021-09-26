@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wood"
     tools:context=".AdminCategoryActivity">
     <TextView
         android:id="@+id/slogan_category"
@@ -49,7 +50,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black"/>
 
         </RelativeLayout>
 
@@ -74,7 +75,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black"/>
 
         </RelativeLayout>
 
@@ -99,7 +100,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black"/>
 
         </RelativeLayout>
 
@@ -124,7 +125,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black"/>
 
         </RelativeLayout>
 
@@ -136,10 +137,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear1_category_layout"
-        android:orientation="horizontal"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:layout_marginTop="10dp">
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:layout_width="80dp"
@@ -150,18 +151,17 @@
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/nasi"
-                />
+                android:src="@drawable/nasi" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Nasi"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -173,20 +173,19 @@
                 android:id="@+id/pazta_i"
                 android:layout_width="65dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="-10dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/pazta"
-                />
+                android:layout_marginTop="-10dp"
+                android:src="@drawable/pazta" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Pazta"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -205,12 +204,12 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Salad"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -223,19 +222,18 @@
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/seafood"
                 android:layout_marginStart="16dp"
-                />
+                android:src="@drawable/seafood" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Seafood"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -247,10 +245,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear2_category_layout"
-        android:orientation="horizontal"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:layout_marginTop="10dp">
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:layout_width="80dp"
@@ -262,18 +260,17 @@
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/pizza"
-                />
+                android:src="@drawable/pizza" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Pizza"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -286,18 +283,17 @@
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/chicken"
-                />
+                android:src="@drawable/chicken" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Chicken"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -311,18 +307,17 @@
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/dessert"
-                />
+                android:src="@drawable/dessert" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Dessert"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -335,19 +330,18 @@
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/juice"
                 android:layout_marginStart="16dp"
-                />
+                android:src="@drawable/juice" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:padding="4dp"
                 android:text="Juice"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/design_default_color_primary_dark"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -361,12 +355,12 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/aladin"
         android:text="Check New Orders"
-        android:textColor="@android:color/white"
-        android:textSize="25dp"
         android:textAllCaps="false"
-        />
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
 
     <Button
         android:id="@+id/admin_logout_btn"
@@ -376,10 +370,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/aladin"
         android:text="Logout"
-        android:textColor="@android:color/white"
-        android:textSize="25dp"
         android:textAllCaps="false"
-        />
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
 </RelativeLayout>

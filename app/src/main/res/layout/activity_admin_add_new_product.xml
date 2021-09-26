@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wood"
     tools:context=".AdminAddNewProductActivity">
 
     <ImageView
         android:id="@+id/select_product_image"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -69,6 +70,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="45dp"
         android:background="@drawable/buttons"
+        android:fontFamily="@font/aladin"
         android:padding="17dp"
         android:text="Add Product"
         android:textAllCaps="false"
