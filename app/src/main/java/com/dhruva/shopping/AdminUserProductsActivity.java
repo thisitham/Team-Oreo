@@ -33,7 +33,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
         productsList.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         productsList.setLayoutManager(layoutManager);
-        cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List").child("Admin view").child(userID).child("Products");
+        cartListRef = FirebaseDatabase.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference().child("Cart List").child("Admin view").child(userID).child("Products");
 
     }
 

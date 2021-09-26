@@ -44,4 +44,8 @@
             android:resource="@array/preloaded_fonts" />
     </application>
 
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.example.ParentActivity" />
+
 </manifest>

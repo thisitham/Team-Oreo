@@ -72,7 +72,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         saveCurrentDate = currentDate.format(calForDate.getTime());
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentDate.format(calForDate.getTime());
-        final DatabaseReference ordersRef= FirebaseDatabase.getInstance().getReference()
+        final DatabaseReference ordersRef= FirebaseDatabase.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference()
                 .child("Orders")
                 .child(Prevalent.currentOnlineUser.getPhone());
         HashMap<String, Object> ordersMap = new HashMap<>();
@@ -88,7 +88,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
-                    FirebaseDatabase.getInstance().getReference()
+                    FirebaseDatabase.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference()
                             .child("Cart List")
                             .child("User view")
                             .child(Prevalent.currentOnlineUser.getPhone())
