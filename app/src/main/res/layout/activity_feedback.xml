@@ -14,7 +14,7 @@
         android:layout_marginTop="55dp"
         android:fontFamily="@font/aladin"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="We Will Really Happy From You!"
+        android:text="We Will Really Happy From You!!"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
