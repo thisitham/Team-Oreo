@@ -6,14 +6,20 @@
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/drawable/input_border.xml" value="0.206640625" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_about_us.xml" value="0.16824324324324325" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_admin_add_new_product.xml" value="0.19453125" />
+        <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_admin_category.xml" value="0.1" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_admin_new_orders.xml" value="0.19453125" />
+        <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_admin_user_products.xml" value="0.1" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_cart.xml" value="0.19453125" />
+        <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_confirm_final_order.xml" value="0.1" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_contact_us.xml" value="0.16824324324324325" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_feedback.xml" value="0.19453125" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_home.xml" value="0.19453125" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_inquiry.xml" value="0.19453125" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_login.xml" value="0.152" />
+        <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_main.xml" value="0.11486486486486487" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_product_details.xml" value="0.19453125" />
+        <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_register.xml" value="0.16458333333333333" />
+        <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_search_products.xml" value="0.15472972972972973" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/activity_settins.xml" value="0.19453125" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/cart_items_layout.xml" value="0.19453125" />
         <entry key="..\:/MAD_Labsheets/Team-Oreo/app/src/main/res/layout/content.xml" value="0.16824324324324325" />
