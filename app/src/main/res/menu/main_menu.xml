@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-<group>
+    <group android:checkableBehavior="single">
 
         <item
             android:id="@+id/nav_home"
@@ -22,14 +22,14 @@
         <item
             android:id="@+id/nav_categories"
             android:icon="@drawable/category"
-            android:title="Cashier" />
+            android:title="Category" />
 
         <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/setting_icon"
             android:title="Setting" />
 
-</group>
+    </group>
 
 
     <item android:title="Profile">
@@ -53,9 +53,9 @@
 
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/share_icon"
-                android:title="Share" />
+                android:id="@+id/nav_inquiry"
+                android:icon="@drawable/inquiry_icon"
+                android:title="Inquiries" />
 
             <item
                 android:id="@+id/nav_rate"

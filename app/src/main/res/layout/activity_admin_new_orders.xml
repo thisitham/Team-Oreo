@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/wood"
     tools:context=".AdminNewOrdersActivity">
+
     <RelativeLayout
         android:id="@+id/r2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimaryDark"
         android:layout_alignParentTop="true"
-        >
+        android:background="@color/colorPrimaryDark">
 
         <TextView
             android:layout_width="match_parent"
