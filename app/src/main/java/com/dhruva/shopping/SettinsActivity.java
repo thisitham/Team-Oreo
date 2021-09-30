@@ -47,7 +47,7 @@ public class SettinsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settins);
-        storageProfilePrictureRef = FirebaseStorage.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference().child("Profile pictures");
+        storageProfilePrictureRef = FirebaseStorage.getInstance("gs://ekart-cf358.appspot.com").getReference().child("Profile pictures");
 
         profileImageView = (CircleImageView) findViewById(R.id.settings_profile_image);
         fullNameEditText = (EditText) findViewById(R.id.settings_full_name);
