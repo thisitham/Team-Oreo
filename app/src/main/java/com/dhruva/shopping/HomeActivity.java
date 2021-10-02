@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -30,6 +31,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
 
@@ -39,6 +41,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     TextView textView;
+    Button gotocartbtn;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
@@ -49,6 +52,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         ProductsRef = FirebaseDatabase.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference().child("Products");
 
+        gotocartbtn = findViewById(R.id.cart_link);
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
         toolbar=findViewById(R.id.toolbar);
@@ -100,6 +104,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         holder.txtProductDescription.setText(model.getDescription());
                         holder.txtProductPrice.setText("Price = " + model.getPrice() + "Rs.");
                         Picasso.get().load(model.getImage()).into(holder.imageView);
+
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -168,8 +173,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_search) {
             Intent intent = new Intent(HomeActivity.this,SearchProductsActivity.class);
             startActivity(intent);
-
-        } else if (id == R.id.nav_categories) {
 
         } else if (id == R.id.nav_profile) {
             Intent intent=new Intent(HomeActivity.this,SettinsActivity.class);

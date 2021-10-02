@@ -58,5 +58,20 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16dp" />
 
+
+        <Button
+            android:id="@+id/cart_link"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_description"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="3dp"
+            android:drawableLeft="@drawable/nav_cart"
+            android:gravity="center"
+            android:text="Goto Cart"
+            android:textAlignment="textEnd"
+            android:textSize="12sp" />
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
