@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood"
+    tools:context=".AdminCategoryActivity">
+    <TextView
+        android:id="@+id/slogan_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Add New Product"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:id="@+id/linear1_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+            <ImageView
+                android:id="@+id/f_rice"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/friderice"
+                />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Fried rice"
+                android:layout_marginRight="8dp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/koththu_r"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="62dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/koththu"
+                />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Kottu"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/noodles_i"
+                android:layout_width="70dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/noodles"
+                />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Noodles"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/soup_i"
+                android:layout_width="70dp"
+                android:layout_marginTop="-30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/soup"
+                />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Soup"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear2_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1_category_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/nasi_i"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/nasi" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Nasi"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/pazta_i"
+                android:layout_width="65dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:src="@drawable/pazta" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Pazta"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/salad_i"
+                android:layout_width="80dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/salad" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Salad"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/sea_food"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/seafood" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Seafood"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear3_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2_category_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+
+            <ImageView
+                android:id="@+id/pizza_i"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pizza" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Pizza"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/chicken_i"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/chicken" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Chicken"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+
+            <ImageView
+                android:id="@+id/dessert_i"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/dessert" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Dessert"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/juice_i"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/juice" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:padding="4dp"
+                android:text="Juice"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/check_orders_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/admin_logout_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/aladin"
+        android:text="Check New Orders"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/admin_logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/aladin"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+</RelativeLayout>
