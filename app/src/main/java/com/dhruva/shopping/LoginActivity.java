@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         chkBoxRememberMe = (CheckBox) findViewById(R.id.remember_me_chkb);
         Paper.init(this);
+
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,18 +53,17 @@ public class LoginActivity extends AppCompatActivity {
 
         AdminLink.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 LoginButton.setText("Login Admin");
                 AdminLink.setVisibility(View.INVISIBLE);
                 NotAdminLink.setVisibility(View.VISIBLE);
                 parentDbName = "Admins";
             }
         });
+
         NotAdminLink.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 LoginButton.setText("Login");
                 AdminLink.setVisibility(View.VISIBLE);
                 NotAdminLink.setVisibility(View.INVISIBLE);
@@ -72,21 +72,18 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-    private void LoginUser()
-    {
+
+    private void LoginUser() {
         String phone = InputPhoneNumber.getText().toString();
         String password = InputPassword.getText().toString();
 
-        if (TextUtils.isEmpty(phone))
-        {
+        if (TextUtils.isEmpty(phone)) {
             Toast.makeText(this, "Please write your phone number...", Toast.LENGTH_SHORT).show();
         }
-        else if (TextUtils.isEmpty(password))
-        {
+        else if (TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Please write your password...", Toast.LENGTH_SHORT).show();
         }
-        else
-        {
+        else {
             loadingBar.setTitle("Login Account");
             loadingBar.setMessage("Please wait, while we are checking the credentials.");
             loadingBar.setCanceledOnTouchOutside(false);
@@ -96,11 +93,10 @@ public class LoginActivity extends AppCompatActivity {
             AllowAccessToAccount(phone, password);
         }
     }
-    private void AllowAccessToAccount(final String phone, final String password)
-    {
 
-        if(chkBoxRememberMe.isChecked())
-        {
+    private void AllowAccessToAccount(final String phone, final String password) {
+
+        if(chkBoxRememberMe.isChecked()) {
             Paper.book().write(Prevalent.UserPhoneKey, phone);
             Paper.book().write(Prevalent.UserPasswordKey, password);
         }
@@ -112,12 +108,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (dataSnapshot.child(parentDbName).child(phone).exists()){
 
                     Users usersData = dataSnapshot.child(parentDbName).child(phone).getValue(Users.class);
-                    if (usersData.getPhone().equals(phone))
-                    {
-                        if (usersData.getPassword().equals(password))
-                        {
-                            if(parentDbName.equals("Admins"))
-                            {
+                    if (usersData.getPhone().equals(phone)) {
+                        if (usersData.getPassword().equals(password)) {
+                            if(parentDbName.equals("Admins")) {
                                 Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 

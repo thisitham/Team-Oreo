@@ -1,4 +1,4 @@
-package com.dhruva.shopping;
+package com.dhruva.shopping.Model;
 
 public class Feed
 {
@@ -9,8 +9,7 @@ public class Feed
 
     public Feed(){}
 
-    public Feed(String name, String inquiry, String contact, String inquire)
-    {
+    public Feed(String name, String inquiry, String contact, String inquire) {
         this.name = name;
         this.Inquiry = inquiry;
         this.Contact = contact;

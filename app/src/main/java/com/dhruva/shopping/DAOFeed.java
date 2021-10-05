@@ -1,5 +1,6 @@
 package com.dhruva.shopping;
 
+import com.dhruva.shopping.Model.Feed;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -11,14 +12,13 @@ public class DAOFeed
     private DatabaseReference databaseReference;
     public DAOFeed()
     {
-        FirebaseDatabase db = FirebaseDatabase.getInstance("https://foodie-app-fdc64-default-rtdb.firebaseio.com/");
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
         databaseReference = db.getReference(Feed.class.getSimpleName());
     }
 
     public Task<Void> add(Feed feed)
 
     {
-
         return databaseReference.push().setValue(feed);
     }
 
@@ -29,7 +29,6 @@ public class DAOFeed
 
     public Task<Void> remove(String key)
     {
-
         return databaseReference.child(key).removeValue();
     }
 

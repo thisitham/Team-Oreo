@@ -29,6 +29,11 @@
             android:icon="@drawable/setting_icon"
             android:title="Setting" />
 
+        <item
+            android:id="@+id/nav_inquiry"
+            android:icon="@drawable/inquiry_icon"
+            android:title="Inquiries" />
+
     </group>
 
 
@@ -49,18 +54,19 @@
     </item>
 
 
-    <item android:title="Communicate">
+<!--    <item android:title="Communicate">-->
 
-        <menu>
-            <item
-                android:id="@+id/nav_inquiry"
-                android:icon="@drawable/inquiry_icon"
-                android:title="Inquiries" />
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_inquiry"-->
+<!--                android:icon="@drawable/inquiry_icon"-->
+<!--                android:title="Inquiries" />-->
 
-            <item
-                android:id="@+id/nav_rate"
-                android:icon="@drawable/rate_icon"
-                android:title="Rate" />
-        </menu>
-    </item>
+<!--            <item-->
+<!--                android:id="@+id/nav_rate"-->
+<!--                android:icon="@drawable/rate_icon"-->
+<!--                android:title="Rate" />-->
+<!--        </menu>-->
+<!--    </item>-->
+
 </menu>

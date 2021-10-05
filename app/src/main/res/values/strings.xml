@@ -29,8 +29,7 @@
     <string name="submit1">SEND FEEDBACK</string>
     <string name="textarea" />
     <string name="text_contact">Contact Us</string>
-    <string name="text_about2">No: 48/53 Main road, Dharmapala Mawatha
-        Colombo 7</string>
+    <string name="text_about2">No: 48/53 Main road, Dharmapala Mawatha Colombo 7</string>
     <string name="text_user">0477625789</string>
     <string name="text_facebook">WWW.FoodieLK</string>
     <string name="text_insta">WWW.FoodieLKInstagram</string>
@@ -60,10 +59,11 @@
     <string name="With">WITH US</string>
     <string name="callbutton">CALL</string>
     <string name="heading">Hotline </string>
-    <string name="txthint1">customer name</string>
-    <string name="txthint2">any issue category</string>
-    <string name="txthint3">customer tel number</string>
-    <string name="txthint">inquiry description</string>
+    <string name="invalid_name">Please Enter the name</string>
+    <string name="invalid_inquiry">Please Enter Inquiry type</string>
+    <string name="invalid_number">Please enter contact no</string>
+    <string name="invalid_inquire">Please type your inquire here</string>
+    <string name="invalid_feedback">Please enter the feedback</string>
 
 
 </resources>

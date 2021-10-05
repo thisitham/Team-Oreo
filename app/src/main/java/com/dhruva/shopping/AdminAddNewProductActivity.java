@@ -45,8 +45,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_new_product);
 
@@ -67,8 +66,8 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
         InputProductImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
+
                 OpenGallery();
             }
         });
@@ -76,8 +75,8 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
         AddNewProductButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
+
                 ValidateProductData();
             }
         });
@@ -91,7 +90,8 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
         });
     }
 
-
+    //Sub Function 01
+    //Pick a image from the device gallery
     private void OpenGallery(){
         Intent galleryIntent = new Intent();
         galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
@@ -99,8 +99,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
         startActivityForResult(galleryIntent, GalleryPick);
     }
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode==GalleryPick  &&  resultCode==RESULT_OK  &&  data!=null)
@@ -109,6 +108,9 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
             InputProductImage.setImageURI(ImageUri);
         }
     }
+
+    //Sub Function 02
+    //Validate input fields fullfill with correct data or not
     private void ValidateProductData() {
         Description = InputProductDescription.getText().toString();
         Price = InputProductPrice.getText().toString();
@@ -135,8 +137,10 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
         }
 
     }
-    private void StoreProductInformation()
-    {
+
+    //Sub Function 03
+    //Set data for firebase storage
+    private void StoreProductInformation() {
         loadingBar.setTitle("Add New Product");
         loadingBar.setMessage("Dear Admin, please wait while we are adding the new product.");
         loadingBar.setCanceledOnTouchOutside(false);
@@ -197,8 +201,10 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
         });
 
     }
-    private void SaveProductInfoToDatabase()
-    {
+
+    //Sub Function 04
+    //Input data save to the DB
+    private void SaveProductInfoToDatabase() {
         HashMap<String, Object> productMap = new HashMap<>();
         productMap.put("pid", productRandomKey);
         productMap.put("date", saveCurrentDate);

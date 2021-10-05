@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/wood"
     tools:context=".AdminCategoryActivity">
+
     <TextView
         android:id="@+id/slogan_category"
         android:layout_width="match_parent"
@@ -16,8 +17,7 @@
         android:text="Add New Product"
         android:textAlignment="center"
         android:textSize="26sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
     <LinearLayout
         android:id="@+id/linear1_category_layout"
         android:layout_width="match_parent"
@@ -33,24 +33,24 @@
         <RelativeLayout
             android:layout_width="80dp"
             android:layout_height="120dp">
+
             <ImageView
                 android:id="@+id/f_rice"
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/friderice"
-                />
+                android:src="@drawable/friderice" />
 
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="8dp"
                 android:padding="4dp"
                 android:text="Fried rice"
-                android:layout_marginRight="8dp"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 
@@ -61,11 +61,10 @@
             <ImageView
                 android:id="@+id/koththu_r"
                 android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_height="62dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/koththu"
-                />
+                android:src="@drawable/koththu" />
 
             <TextView
                 android:layout_width="70dp"
@@ -87,10 +86,9 @@
                 android:id="@+id/noodles_i"
                 android:layout_width="70dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/noodles"
-                />
+                android:layout_marginTop="10dp"
+                android:src="@drawable/noodles" />
 
             <TextView
                 android:layout_width="70dp"

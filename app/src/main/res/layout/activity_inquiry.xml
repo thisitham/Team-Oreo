@@ -7,16 +7,43 @@
     android:background="@drawable/yellowback"
     tools:context=".Inquiry">
 
+    <TextView
+        android:id="@+id/text_feedback"
+        android:layout_width="335dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="55dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Do You Need Our Support?"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="357dp"
+        android:layout_height="2dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_feedback" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container1"
         android:layout_width="350dp"
         android:layout_height="550dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="107dp"
         android:background="@drawable/round_corner_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189">
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
         <TextView
             android:id="@+id/textinqure1"
@@ -29,8 +56,6 @@
             app:layout_constraintHorizontal_bias="0.185"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        //name
 
         <ImageView
             android:id="@+id/image01"
@@ -65,7 +90,7 @@
             android:layout_height="30dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="@string/txthint1"
+            android:hint="Enter Your Name"
             android:inputType="textPersonName"
             android:shadowColor="@color/black"
             android:text="@string/name_id"
@@ -75,7 +100,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
             tools:ignore="TouchTargetSizeCheck" />
-        //type
 
         <TextView
             android:id="@+id/texttype"
@@ -95,7 +119,7 @@
             android:layout_height="30dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="@string/txthint2"
+            android:hint="Enter Inquiry Type"
             android:inputType="textPersonName"
             android:text="@string/inquiry_id"
             android:textColor="@color/black"
@@ -104,8 +128,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/texttype"
             tools:ignore="TouchTargetSizeCheck" />
-
-        //Contact
 
         <TextView
             android:id="@+id/textcontactno"
@@ -127,7 +149,7 @@
             android:layout_height="30dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="@string/txthint3"
+            android:hint="Enter Your Phone Number"
             android:inputType="textPersonName"
             android:text="@string/contact_id"
             android:textColor="@color/black"
@@ -136,8 +158,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textcontactno"
             tools:ignore="TouchTargetSizeCheck" />
-
-        //inquiry
 
         <TextView
             android:id="@+id/textinqurytype"
@@ -157,7 +177,7 @@
             android:layout_height="94dp"
             android:background="@color/white"
             android:ems="10"
-            android:hint="@string/txthint"
+            android:hint="Inquiry Description"
             android:inputType="textPersonName"
             android:lines="6"
             android:text="@string/inquiry_type"
@@ -187,24 +207,6 @@
             app:layout_constraintTop_toBottomOf="@+id/edit_Inquire" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:id="@+id/nextbutton"
-        android:layout_width="142dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="56dp"
-        android:background="@drawable/input_design"
-        android:fontFamily="@font/aladin"
-        android:text="Next"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container1"
-        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
