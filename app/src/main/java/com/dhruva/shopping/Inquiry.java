@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.dhruva.shopping.Model.Feed;
+
 public class Inquiry extends AppCompatActivity {
 
     Button nextbutton;

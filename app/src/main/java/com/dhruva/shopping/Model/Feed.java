@@ -1,20 +1,19 @@
-package com.dhruva.shopping;
+package com.dhruva.shopping.Model;
 
-public class Feed
-{
+public class Feed {
     private String name;
     private String Inquiry;
     private String Contact;
     private String Inquire;
 
-    public Feed(){}
+    public Feed() {
+    }
 
-    public Feed(String name, String inquiry, String contact, String inquire)
-    {
+    public Feed(String name, String Inquiry, String Contact, String Inquire) {
         this.name = name;
-        this.Inquiry = inquiry;
-        this.Contact = contact;
-        this.Inquire = inquire;
+        this.Inquiry = Inquiry;
+        this.Contact = Contact;
+        this.Inquire = Inquire;
     }
 
     public String getName() {
@@ -49,3 +48,7 @@ public class Feed
         Inquire = inquire;
     }
 }
+
+
+
+

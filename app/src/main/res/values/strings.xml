@@ -17,6 +17,7 @@
     <string name="per_item_price">Per Item Price</string>
     <string name="total_price">Total Price</string>
 
+
     <string name="Text">About Us</string>
     <string name="text1">Welcome To FOODIE</string>
     <string name="text02">FOODIE is product to have build restaurant web site for businesses just like yours all over the sri lanka.
@@ -60,10 +61,12 @@
     <string name="With">WITH US</string>
     <string name="callbutton">CALL</string>
     <string name="heading">Hotline </string>
-    <string name="txthint1">customer name</string>
-    <string name="txthint2">any issue category</string>
-    <string name="txthint3">customer tel number</string>
-    <string name="txthint">inquiry description</string>
+    <string name="invalid_name">Please Enter the name</string>
+    <string name="invalid_inquiry">Please Enter Inquiry type</string>
+    <string name="invalid_number">Please enter contact no</string>
+    <string name="invalid_inquire">Please type your inquire here</string>
+    <string name="invalid_feedback">Please enter the feedback</string>
+    <string name="name_idz" />
 
 
 </resources>

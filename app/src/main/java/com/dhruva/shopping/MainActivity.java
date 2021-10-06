@@ -1,107 +1,92 @@
 package com.dhruva.shopping;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dhruva.shopping.Model.Users;
-import com.dhruva.shopping.Prevalent.Prevalent;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import io.paperdb.Paper;
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+import com.dhruva.shopping.Model.Feed;
 
 public class MainActivity extends AppCompatActivity {
-    private Button joinNowButton, loginButton;
-    private ProgressDialog loadingBar;
+
+    //EditText edit_text1;
+    //EditText edit_text2;
+    //EditText edit_text3;
+    //EditText edit_text4;
+    Button submitbutton;
+    Button nextbutton;
+    //DatabaseReference ref;
+    private Button Back_btn;
+
+    AwesomeValidation awesomeValidation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        joinNowButton = (Button) findViewById(R.id.main_join_now_btn);
-        loginButton = (Button) findViewById(R.id.main_login_btn);
-        loadingBar = new ProgressDialog(this);
-        Paper.init(this);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, com.dhruva.shopping.LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-        joinNowButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
+
+        final EditText edit_name = findViewById(R.id.edit_name);
+        final EditText edit_Inquiry = findViewById(R.id.edit_Inquiry);
+        final EditText edit_Contact = findViewById(R.id.edit_Contact);
+        final EditText edit_Inquire = findViewById(R.id.edit_Inquire);
+
+        Back_btn = (Button) findViewById(R.id.nextBtn);
+        submitbutton = findViewById(R.id.submitbutton);
+
+        submitbutton.setOnClickListener(v -> {
+
+            //initialize validation style
+            awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+            //Add validation for name
+            awesomeValidation.addValidation(this, R.id.edit_name,
+                    RegexTemplate.NOT_EMPTY, R.string.invalid_name);
+
+            //validation for Inquiry
+            awesomeValidation.addValidation(this, R.id.edit_Inquiry,
+                    RegexTemplate.NOT_EMPTY, R.string.invalid_inquiry);
+
+            //validation for contact
+            awesomeValidation.addValidation(this, R.id.edit_Contact
+                    , "[5-9]{1}[0-9]{9}$", R.string.invalid_number);
+
+            //validation for Inquire
+            awesomeValidation.addValidation(this, R.id.edit_Inquire,
+                    RegexTemplate.NOT_EMPTY, R.string.invalid_inquire);
+
+
+            DAOFeed dao = new DAOFeed();
+
+            Feed feed = new Feed(edit_name.getText().toString(), edit_Inquiry.getText().toString(), edit_Contact.getText().toString(), edit_Inquire.getText().toString());
+            dao.add(feed).addOnSuccessListener(suc ->
             {
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
+                if (awesomeValidation.validate()) {
+                    Intent reload = new Intent(MainActivity.this,MainActivity.class);
+                    startActivity(reload);
+                    Toast.makeText(this, "Inquiry was submitted", Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(er ->
+                    Toast.makeText(this, "" + er, Toast.LENGTH_SHORT).show());
+
         });
-        String UserPhoneKey = Paper.book().read(Prevalent.UserPhoneKey);
-        String UserPasswordKey = Paper.book().read(Prevalent.UserPasswordKey);
-        if (UserPhoneKey != "" && UserPasswordKey != "")
-        {
-            if (!TextUtils.isEmpty(UserPhoneKey)  &&  !TextUtils.isEmpty(UserPasswordKey))
-            {
-                AllowAccess(UserPhoneKey, UserPasswordKey);
 
-                loadingBar.setTitle("Already Logged in");
-                loadingBar.setMessage("Please wait.....");
-                loadingBar.setCanceledOnTouchOutside(false);
-                loadingBar.show();
-            }
-        }
-    }
-    private void AllowAccess(final String phone, final String password)
-    {
-        final DatabaseReference RootRef;
-        RootRef = FirebaseDatabase.getInstance("https://ekart-cf358-default-rtdb.firebaseio.com/").getReference();
-        RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+        Back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.child("Users").child(phone).exists()){
-
-                    Users usersData = dataSnapshot.child("Users").child(phone).getValue(Users.class);
-                    if (usersData.getPhone().equals(phone))
-                    {
-                        if (usersData.getPassword().equals(password))
-                        {
-                            Toast.makeText(MainActivity.this, "Please wait, you are already logged in...", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
-
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            Prevalent.currentOnlineUser = usersData;
-                            startActivity(intent);
-
-                        }
-                        else {
-                            loadingBar.dismiss();
-                            Toast.makeText(MainActivity.this,"Password is incorrect",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }
-                else {
-                    Toast.makeText(MainActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
-                    loadingBar.dismiss();
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
+            public void onClick(View v) {
+                Intent btnIntent = new Intent(MainActivity.this,Feedback.class);
+                startActivity(btnIntent);
             }
         });
     }
 }
+
+
